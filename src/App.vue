@@ -3,7 +3,7 @@
     <h1>COVID-19 in Sri Lanka</h1>
     <p>
       <strong>Starting from 21st January</strong><br />Detecting
-      the real number of cases in Sri Lanka.<br/><small>(Foriegn nationals include)</small>
+      the real number of cases in Sri Lanka.
     </p>
     <Data />
     <p>Data source: Johns Hopkins University. Numbers of cases may not be exhaustive as no reliable local source for statistics.
