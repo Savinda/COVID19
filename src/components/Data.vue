@@ -48,10 +48,10 @@ export default {
   },
   data() {
     return {
-      // disabledDates: {
-      //   to: new Date(2020, 1, 22),
-      //   from: new Date()
-      // },
+      disabledDates: {
+        to: new Date(2020, 1, 22),
+        from: new Date()
+      },
       data,
       today: new Date(),
       contagions: [],

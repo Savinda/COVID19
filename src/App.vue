@@ -7,7 +7,7 @@
     </p>
     <Data />
     <p>Data source: Johns Hopkins University. Numbers of cases may not be exhaustive as no reliable local source for statistics.
-      <br/><small>Followed news stories from News First and Ada Derana to categorize patients based on the hospital they are being treated at.</small></p>
+      </p>
     <h2>Comparing situation with the World</h2>
     <p>
       in progress...
