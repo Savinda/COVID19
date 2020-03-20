@@ -17,11 +17,11 @@
       <strong v-if="isNaN(totalDeaths)">0</strong>
       <strong v-else>{{ totalDeaths }}</strong>
     </p></li><br/>
-    <small><strong>NOTE: </strong>All cases categorized on treatment location.<br/>(Base Hospitals etc)</small>
+    <small><strong>NOTE: </strong>All cases categorized on treatment location.</small>
     </ul>
     
     
-    <div class="choose-date">
+    <!-- <div class="choose-date">
       <p>Dates:</p>
       <v-slider
         v-model="selectedDate"
@@ -29,7 +29,8 @@
         :max="sliderDates.length - 1"
         ticks="always"
       ></v-slider>
-    </div>
+    </div> -->
+    <p><br/>&nbsp;</p>
     <SvgElement :contagions="contagions" :totalcases="totalCases" />
     <Chart :chartcontagions="chartcontagions" />
   </div>
@@ -175,41 +176,7 @@ export default {
         this.loadData(`data_${i}`);
       }
     },
-    // loadData(x) {
-    //   this.totalCases = 0;
-    //   this.totalDeaths = 0;
-    //   this.contagions = [];
-    //   // process data from csvs, create an array of cases objects per canton
-    //   if (this.data.days[x] !== undefined) {
-    //     this.data.days[x].forEach(element => {
-    //       const obj = {};
-    //       obj["name"] = this.cantons.find(
-    //         ({ name }) => name === element.Titel
-    //       ).short;
-    //       obj["cases"] = element.Cases;
-    //       obj["deaths"] = element.Deaths;
-    //       this.contagions.push(obj);
-    //     });
-    //     this.contagions.forEach(element => {
-    //       this.totalCases += element["cases"];
-    //       this.totalDeaths += element["deaths"];
-    //     });
-    //   } else {
-    //     // unavailable: day not imported yet
-    //     // => get last day with data
-    //     let i = 0;
-    //     Object.entries(this.data.days).forEach(([key]) => {
-    //       const keyString = [
-    //         key.replace("data_", "").slice(0, 2),
-    //         key.replace("data_", "").slice(2, 4)
-    //       ].join("");
-    //       if (i < parseInt(keyString)) {
-    //         i = keyString;
-    //       }
-    //     });
-    //     this.loadData(`data_${i}`);
-    //   }
-    // },
+   
     customFormatter(date) {
       return moment(date).format("DD.MM.YYYY");
     },
