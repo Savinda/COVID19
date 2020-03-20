@@ -1,6 +1,8 @@
 <template>
+
   <div class="chart-wrapper">
-    <apexchart type="area" :options="options" :series="series"></apexchart>
+    <apexchart id="chart-area" type="area" :options="options" :series="series"></apexchart>
+    <!-- <apexchart id="chart-bar" type="bar" :options="options" :series="series"></apexchart> -->
   </div>
 </template>
 
@@ -12,10 +14,12 @@ export default {
     return {
       options: {
         chart: {
-          id: "total-cases",
+          id: "chart2",
           type: "area",
+          height: 230,
           fontFamily: "Avenir, Helvetica, Arial, sans-serif",
           foreColor: "#444",
+          stacked: true,
           toolbar: {
             autoSelected: "pan",
             show: false
@@ -24,10 +28,37 @@ export default {
             enabled: false
           }
         },
-        
-        // dataLabels: {
-        //   enabled: false
+        colors: ["#ef233c"],
+        stroke: {
+          width: 3
+        },
+       
+        dataLabels: {
+          enabled: true,
+          enabledOnSeries: undefined,
+          textAnchor: 'middle',
+          style: {
+          fontSize: '10px',
+          },
+        },
+        fill: {
+          gradient: {
+            enabled: true,
+            opacityFrom: 0.55,
+            opacityTo: 0
+          }
+        },
+        // markers: {
+        //   size: 4,
+        //   discrete: [],
+        //   colors: ["#ef233c"],
+        //   dataPointIndex: 7,
+        //   strokeColor: "#ef233c",
+        //   strokeWidth: 4
         // },
+        tooltip: {
+          theme: "light"
+        },
         annotations: {
           xaxis: [
             {
@@ -111,18 +142,22 @@ export default {
             },
           ]
         },
-        colors: ["#ef233c"],
         xaxis: {
           type: "category",
-          categories: [],
+          categories: [],  
           title: {
             text: "Days since 22nd January"
           }
+          
+
         },
         yaxis: {
+          min: 0,
+          tickAmount: 4,
           title: {
             text: "Total COVID-19 Cases in Sri Lanka"
           }
+          
         },
         
         responsive: [
@@ -141,13 +176,12 @@ export default {
           name: "Confirmed",
           data: []
         },
-        // {
-        //   name: "Recovered",
-        //   data: []
-        // }
-      ]
+        
+      ],
     };
+
   },
+  
   
   created() {
     const days = [];
@@ -167,6 +201,9 @@ export default {
     apexchart: VueApexCharts
   }
 };
+
+
+
 </script>
 
 <style lang="scss" scoped>
