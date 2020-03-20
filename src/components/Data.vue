@@ -91,7 +91,8 @@ export default {
         { name: "Badulla", short: "Badulla" },
         { name: "Moneragala", short: "Moneragala" },
         { name: "Ratnapura", short: "Ratnapura" },
-        { name: "Kegalle", short: "Kegalle" }
+        { name: "Kegalle", short: "Kegalle" },
+        { name: "unspecified", short: "unspecified" }
       ]
     };
   },
