@@ -34,12 +34,12 @@ export default {
         },
        
         dataLabels: {
-          enabled: true,
-          enabledOnSeries: undefined,
-          textAnchor: 'middle',
-          style: {
-          fontSize: '10px',
-          },
+          enabled: false,
+          // enabledOnSeries: [1,2],
+          // textAnchor: 'middle',
+          // style: {
+          // fontSize: '10px',
+          // },
         },
         fill: {
           gradient: {

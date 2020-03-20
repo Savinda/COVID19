@@ -33,6 +33,7 @@
     <p><br/>&nbsp;</p>
     <SvgElement :contagions="contagions" :totalcases="totalCases" />
     <Chart :chartcontagions="chartcontagions" />
+    <newChart/>
   </div>
 </template>
 
