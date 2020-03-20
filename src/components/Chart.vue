@@ -1,6 +1,6 @@
 <template>
   <div class="chart-wrapper">
-    <apexchart type="line" :options="options" :series="series"></apexchart>
+    <apexchart type="area" :options="options" :series="series"></apexchart>
   </div>
 </template>
 
@@ -13,15 +13,18 @@ export default {
       options: {
         chart: {
           id: "total-cases",
-          type: "line",
+          type: "area",
           fontFamily: "Avenir, Helvetica, Arial, sans-serif",
+          foreColor: "#444",
           toolbar: {
+            autoSelected: "pan",
             show: false
           },
           zoom: {
             enabled: false
           }
         },
+        
         // dataLabels: {
         //   enabled: false
         // },
@@ -108,7 +111,7 @@ export default {
             },
           ]
         },
-        colors: ["#ef233c", "#00ffff"],
+        colors: ["#ef233c"],
         xaxis: {
           type: "category",
           categories: [],
@@ -145,18 +148,7 @@ export default {
       ]
     };
   },
-  // created() {
-  //   const days = [];
-  //   this.chartcontagions.forEach(function(element) {
-  //     days.push(element.date);
-  //   });
-  //   this.options.xaxis.categories = days;
-  //   const arrayTotals = [];
-  //   this.chartcontagions.forEach(function(element) {
-  //     arrayTotals.push(element.total);
-  //   });
-  //   this.series[0].data = arrayTotals;
-  // },
+  
   created() {
     const days = [];
     this.chartcontagions.forEach(function(element) {
