@@ -92,7 +92,8 @@ export default {
         { name: "Moneragala", short: "Moneragala" },
         { name: "Ratnapura", short: "Ratnapura" },
         { name: "Kegalle", short: "Kegalle" },
-        { name: "unspecified", short: "unspecified" }
+        { name: "Quarantine-Centers", short: "Quarantine-Centers" },
+        { name: "Foreigners", short: "Foreigners" }
       ]
     };
   },
