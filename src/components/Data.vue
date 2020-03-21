@@ -17,7 +17,6 @@
       <strong v-if="isNaN(totalDeaths)">0</strong>
       <strong v-else>{{ totalDeaths }}</strong>
     </p></li><br/>
-    <small><strong>NOTE: </strong>All cases categorized on treatment location.</small>
     </ul>
     
     
