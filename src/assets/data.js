@@ -65,6 +65,7 @@ import data_0324 from "./data/0324.csv";
 import data_0325 from "./data/0325.csv";
 import data_0326 from "./data/0326.csv";
 import data_0327 from "./data/0327.csv";
+import data_0328 from "./data/0328.csv";
 
 
 export default {
@@ -135,6 +136,7 @@ export default {
     data_0324,
     data_0325,
     data_0326,
-    data_0327
+    data_0327,
+    data_0328
   }
 };
