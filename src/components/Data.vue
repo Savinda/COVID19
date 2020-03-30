@@ -128,7 +128,7 @@ export default {
         day++;
         // prepare the totals
         let dayTotal = 0;
-        if (key === "data_0330") {
+        if (key === "data_0630") {
           // dayTotal = 9;
         } else {
           val.forEach(function(element) {
