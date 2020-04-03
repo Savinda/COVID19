@@ -69,6 +69,8 @@ import data_0328 from "./data/0328.csv";
 import data_0329 from "./data/0329.csv";
 import data_0330 from "./data/0330.csv";
 import data_0331 from "./data/0331.csv";
+import data_0401 from "./data/0401.csv";
+import data_0402 from "./data/0402.csv";
 
 export default {
   days: {
@@ -142,6 +144,8 @@ export default {
     data_0328,
     data_0329,
     data_0330,
-    data_0331
+    data_0331,
+    data_0401,
+    data_0402
   }
 };
